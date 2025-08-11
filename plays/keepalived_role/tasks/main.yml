@@ -1,9 +1,0 @@
----
-# tasks file for keepalived_role
-
-- name: Install haproxy
-  import_tasks: installKeepalived.yml
-
-- name: Configure haproxy
-  import_tasks: configureKeepalived.yml
-

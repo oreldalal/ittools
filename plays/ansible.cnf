@@ -1,6 +1,0 @@
-[defaults]
-inventory = ./inventory
-roles_path = ./roles:/usr/share/ansible/roles
-become = false
-forks = 10
-remote_user = vagrant

@@ -1,9 +1,0 @@
----
-# tasks file for haproxy_role
-
-- name: Install haproxy
-  import_tasks: installHaproxy.yml
-
-- name: Configure haproxy
-  import_tasks: configureHaproxy.yml
-

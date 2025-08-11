@@ -1,8 +1,0 @@
----
-# handlers file for keepalived_role
-
-- name: restart keepalived
-  ansible.builtin.service:
-    name: keepalived
-    state: restarted
-
