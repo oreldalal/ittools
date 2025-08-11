@@ -1,0 +1,11 @@
+- name: Copy website content based on hostname
+  ansible.builtin.copy:
+    src: "{{ host_files[inventory_hostname] }}"
+    dest: "/usr/share/nginx/html/index.html"
+    mode: '0644'
+  vars:
+    host_files:
+      nginx1: "index_hafifa.html"
+      nginx2: "index_clouds.html"
+  notify: restart nginx
+

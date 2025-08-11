@@ -1,0 +1,10 @@
+- name: Deploy keepalived config file
+  template:
+    src: keepalived.conf.j2
+    dest: /etc/keepalived/keepalived.conf
+    mode: '0644'
+  vars:
+    vrrp_state: "{{ vrrp_vars[inventory_hostname].vrrp_state }}"
+    vrrp_priority: "{{ vrrp_vars[inventory_hostname].vrrp_priority }}"
+  notify: restart keepalived
+

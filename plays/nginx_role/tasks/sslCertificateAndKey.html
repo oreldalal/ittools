@@ -1,0 +1,16 @@
+- name: Create directory for server certs
+  ansible.builtin.file:
+    path: "/etc/ssl/certs"
+    state: directory
+    mode: '0755'
+
+- name: Copy server.key and server.crt
+  ansible.builtin.copy:
+    src: "{{ item.src }}"
+    dest: "/etc/ssl/certs/{{ item.name }}"
+    mode: '0644'
+  loop:
+    - { name: "server.key", src: "server.key" }
+    - { name: "server.crt", src: "server.crt" }
+
+

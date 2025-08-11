@@ -1,0 +1,10 @@
+- name: ensure keepalived is at the latest version
+  yum:
+    name: keepalived
+    state: latest
+
+- name: start keepalived
+  service: 
+    name: keepalived
+    state: started
+    enabled: yes  

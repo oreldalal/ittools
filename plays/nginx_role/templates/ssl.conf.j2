@@ -1,0 +1,13 @@
+server {
+    listen 443 ssl;
+    server_name {{ server_name }};
+
+    ssl_certificate /etc/ssl/certs/server.crt;
+    ssl_certificate_key /etc/ssl/certs/server.key;
+
+    location / {
+        root /usr/share/nginx/html;
+        index index.html;
+    }
+}
+

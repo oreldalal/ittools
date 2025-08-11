@@ -1,0 +1,11 @@
+authorityKeyIdentifier=keyid,issuer
+basicConstraints=CA:FALSE
+subjectAltName = @alt_names
+[alt_names]
+DNS.1 = custom.cert.nginx.com
+DNS.2 = google.com
+DNS.3 = youtube.com
+DNS.4 = *.google.com
+DNS.5 = ilovehafifa.com
+DNS.6 = iloveclouds.com
+

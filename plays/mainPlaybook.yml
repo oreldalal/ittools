@@ -1,0 +1,22 @@
+---
+- name: Deploy Nginx with SSL and content
+  hosts: nginx
+  become: true
+
+  roles:
+    - nginx_role
+
+- name:  Deploy Haproxy
+  hosts: haproxy
+  become: true
+
+  roles:
+    - haproxy_role
+
+- name:  Deploy Keepalived
+  hosts: haproxy
+  become: true
+
+  roles:
+    - keepalived_role
+

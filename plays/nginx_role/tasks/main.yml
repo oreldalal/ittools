@@ -1,0 +1,15 @@
+---
+# tasks file for nginx_role
+
+- name: Install nginx
+  import_tasks: installNginx.yml
+
+- name: Configure SSL certificate and key
+  import_tasks: sslCertificateAndKey.html
+
+- name: Copy virtual host configuration
+  import_tasks: virtualHosts.yml
+
+- name: Deploy website content
+  import_tasks: websiteContent.yml
+
